@@ -6,7 +6,8 @@
     <data>
     <variable
         name="posts"
-        type="com.minhnv.assignmentnetworking.model.Embedded" />
+        type="com.minhnv.assignmentnetworking.model.MediaDetails" />
+
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -34,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/menu_share"
+            android:text="k"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
@@ -70,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/menu_share"
+            android:text="j"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"

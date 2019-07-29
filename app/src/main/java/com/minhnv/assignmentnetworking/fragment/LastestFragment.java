@@ -12,8 +12,10 @@ import android.view.ViewGroup;
 
 import com.minhnv.assignmentnetworking.Ultil.APIUltil;
 
+import com.minhnv.assignmentnetworking.adapter.Adapter_Posts;
 import com.minhnv.assignmentnetworking.databinding.FragmentLastestBinding;
 import com.minhnv.assignmentnetworking.model.Embedded;
+import com.minhnv.assignmentnetworking.model.MediaDetails;
 import com.minhnv.assignmentnetworking.model.Post;
 
 import java.util.List;
@@ -26,15 +28,31 @@ import retrofit2.Response;
 public class LastestFragment extends Fragment {
 
     private FragmentLastestBinding binding;
-    private List<Embedded> embeddeds;
+    private List<MediaDetails> embeddeds;
+    private Adapter_Posts adapter_posts;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        binding = FragmentLastestBinding.inflate(inflater,container,false);
-
+        GetPost();
        return binding.getRoot();
     }
+    private void GetPost(){
+        binding.rycLastest.setHasFixedSize(true);
+        binding.rycLastest.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
+     APIUltil.getData().GetPost("").enqueue(new Callback<Post>() {
+         @Override
+         public void onResponse(Call<Post> call, Response<Post> response) {
+             Log.d("///", response.body()+"");
+         }
+
+         @Override
+         public void onFailure(Call<Post> call, Throwable t) {
+
+         }
+     });
+    }
 
 }

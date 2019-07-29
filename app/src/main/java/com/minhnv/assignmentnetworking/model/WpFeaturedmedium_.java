@@ -4,7 +4,7 @@ package com.minhnv.assignmentnetworking.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class WpFeaturedmedium_ {
+public class    WpFeaturedmedium_ {
 
     @SerializedName("id")
     @Expose

@@ -1,5 +1,6 @@
 package com.minhnv.assignmentnetworking.Ultil;
 
+import com.minhnv.assignmentnetworking.model.MediaDetails;
 import com.minhnv.assignmentnetworking.model.Post;
 
 import java.util.List;
